@@ -6,15 +6,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.leanback.widget.ListRow
 import androidx.leanback.widget.Presenter
+import androidx.leanback.widget.RowHeaderPresenter
 
-class IconHeaderItemPresenter : Presenter() {
+class IconHeaderItemPresenter : RowHeaderPresenter() {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup): Presenter.ViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup): RowHeaderPresenter.ViewHolder {
         val view = LayoutInflater.from(viewGroup.context).run {
             inflate(R.layout.icon_header_item, null)
         }
 
-        return Presenter.ViewHolder(view)
+        return RowHeaderPresenter.ViewHolder(view)
     }
 
 
